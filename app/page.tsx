@@ -73,27 +73,7 @@ export default function Home() {
           </article>
         </div>
 
-        <section className="rounded-3xl border border-slate-800 bg-slate-900/75 p-6 shadow-2xl shadow-black/30 backdrop-blur animate-[fadeUp_0.55s_ease-out]">
-          <div className="flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">Metrics module</p>
-              <h2 className="mt-2 text-2xl font-semibold text-white">Key impact highlights</h2>
-            </div>
-            <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-cyan-100">Draft-ready</span>
-          </div>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {portfolioContent.metrics.slice(0, 3).map((metric, index) => (
-              <article key={metric.id} className="rounded-2xl border border-slate-800 bg-slate-950/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-cyan-500/10 animate-[float_4s_ease-in-out_infinite]" style={{ animationDelay: `${index * 0.25}s` }}>
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-sm text-cyan-200">{metric.label}</p>
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10 text-lg">{metricIcons[index]}</span>
-                </div>
-                <h3 className="mt-3 text-3xl font-semibold text-white">{metric.value.toLocaleString()}</h3>
-                <p className="mt-1 text-xs uppercase tracking-[0.25em] text-slate-400">{metric.unit}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+        {/* Metrics were moved to per-project views to improve context */}
 
         <div className="grid gap-6 md:grid-cols-2 animate-[fadeUp_0.6s_ease-out]">
           {caseStudyContent.projects.slice(0, 4).map((project, index) => (
@@ -106,7 +86,11 @@ export default function Home() {
                 <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-950 text-2xl shadow-inner shadow-black/30">{projectIcons[project.id] ?? '✨'}</span>
                 <div>
                   <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
-                  <p className="mt-1 text-sm text-slate-300">{project.source.join(' • ')}</p>
+                  <div className="mt-1 flex gap-2 flex-wrap">
+                    {projectSkills[project.id]?.skills.map((s) => (
+                      <span key={`${project.id}-${s}`} className="rounded-full border border-slate-700 bg-slate-950/70 px-2 py-1 text-[11px] text-slate-200">{s}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="mt-4 space-y-3">

@@ -6,6 +6,8 @@ export const projectStories = {
       live: 'https://myu.vn/',
       deeplink: 'https://myu.onelink.me/Rp8t/itf3vbo1',
     },
+    skills: ['Commerce', 'Payments', 'Ops'],
+    tech: ['Node.js', 'Koa', 'Sequelize', 'MySQL', 'Redis', 'S3'],
     sections: [
       ['Overview', 'myU is a real-world commerce platform with order, payment, shop, and operations workflows. The engineering goal was to keep critical transactions stable, traceable, and easy to extend as new business modules appear.'],
       ['Problem', 'The platform must handle concurrent order, payment, and reporting flows with strong reliability. The team needed clearer logs, faster incident traces, and a cleaner architecture for new payment integrations.'],
@@ -18,6 +20,8 @@ export const projectStories = {
   'myu-id': {
     tagline: 'Identity and authentication backbone',
     summary: 'Built a centralized SSO platform to unify login, token lifecycle, OTP, and device management across the ecosystem.',
+    skills: ['Auth', 'Security', 'Identity'],
+    tech: ['Node.js', 'Koa', 'Sequelize', 'MySQL', 'Redis', 'JWT', 'Joi'],
     sections: [
       ['Overview', 'MyU ID acts as the identity layer for the myU ecosystem, handling sign-in, token issuance, OTP flows, and device lifecycle management across multiple products.'],
       ['Problem', 'Authentication was spread across apps and needed a secure, shared source of truth. The platform also needed to support multiple login paths while preserving auditability and security standards.'],
@@ -30,6 +34,8 @@ export const projectStories = {
   events: {
     tagline: 'Dynamic event operations platform',
     summary: 'Designed a flexible form and survey platform for large events with strong FE resilience and high-concurrency handling.',
+    skills: ['Forms', 'Survey', 'Events Ops'],
+    tech: ['Node.js', 'Express', 'Gatsby', 'React', 'Sequelize', 'S3', 'MSAL'],
     sections: [
       ['Overview', 'Events Platform supports dynamic forms, registration, QR check-in, reporting, and event operations for large-scale gatherings. The product needed to adapt quickly to different event flows without frequent code releases.'],
       ['Problem', 'Event forms changed often, traffic peaked unexpectedly, and the front-end needed to handle high-volume interactions without breaking operational workflows.'],
@@ -47,6 +53,8 @@ export const projectStories = {
       deeplink: 'https://hrm.hexagon.xyz/open-app',
       deeplinkAndroid: 'https://hrm.hexagon.xyz/open-app-android',
     },
+    skills: ['Architecture', 'Admin UX', 'Data Flow'],
+    tech: ['Next.js', 'React', 'TypeScript', 'Sequelize', 'MSSQL', 'TanStack Query'],
     sections: [
       ['Overview', 'Hung Hau House is an architecture-led platform that blends admin workflows with a modern Next.js app-router implementation. The goal was to keep the product maintainable while delivering better UX and performance.'],
       ['Problem', 'The project needed to support several business modules at once while avoiding hydration mismatch, keeping auth consistent, and balancing SSR and client-side performance.'],

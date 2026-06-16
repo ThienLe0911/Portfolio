@@ -33,7 +33,11 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           <p className="mt-4 max-w-3xl text-slate-300">{story?.summary}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <span className="rounded-full border border-slate-700 bg-slate-800/80 px-3 py-1 text-sm text-slate-200">Status: {project.status}</span>
-            <span className="rounded-full border border-slate-700 bg-slate-800/80 px-3 py-1 text-sm text-slate-200">Sources: {project.source.length}</span>
+            <div className="flex gap-2 flex-wrap">
+              {(story?.skills || []).map((s) => (
+                <span key={s} className="rounded-full border border-slate-700 bg-slate-950/70 px-3 py-1 text-sm text-slate-200">{s}</span>
+              ))}
+            </div>
           </div>
           {story?.links ? (
             <div className="mt-6 flex flex-wrap gap-3">
@@ -85,14 +89,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           </div>
         </article>
 
-        <article className="rounded-3xl border border-slate-800 bg-slate-900/75 p-6 shadow-2xl shadow-black/30 backdrop-blur">
-          <h2 className="text-xl font-semibold text-white">Source references</h2>
-          <ul className="mt-4 space-y-2 text-slate-200">
-            {project.source.map((entry) => (
-              <li key={entry} className="rounded-2xl border border-slate-800 bg-slate-950/70 px-4 py-3 text-sm">{entry}</li>
-            ))}
-          </ul>
-        </article>
+        {/* Source references removed for public-facing site */}
       </section>
     </main>
   );
