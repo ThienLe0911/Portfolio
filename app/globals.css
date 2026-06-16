@@ -8,49 +8,68 @@
 
 html { scroll-behavior: smooth; }
 
+/* ─── keyframes ──────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+  50%       { transform: translateY(-7px); }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 rgba(56, 189, 248, 0.15); }
-  50% { box-shadow: 0 0 18px rgba(56, 189, 248, 0.25); }
+  0%, 100% { box-shadow: 0 0 0 rgba(56,189,248,0.1); }
+  50%       { box-shadow: 0 0 26px rgba(56,189,248,0.22); }
 }
 
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── persistent ──────────────────────────────────────────── */
 .glass-card {
   animation: pulseGlow 4s ease-in-out infinite;
 }
 
-.reveal-on-scroll {
-  animation: reveal 0.8s ease both;
-  animation-timeline: view();
-  animation-range: entry 0% cover 35%;
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ─── scroll-reveal ──────────────────────────────────────── */
+/* hidden states */
+.sr-up    { opacity: 0; transform: translateY(32px); }
+.sr-left  { opacity: 0; transform: translateX(-32px); }
+.sr-right { opacity: 0; transform: translateX(32px); }
+.sr-fade  { opacity: 0; }
+
+/* revealed */
+.sr-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  transition:
+    opacity 0.75s cubic-bezier(.22,.68,0,1.2),
+    transform 0.75s cubic-bezier(.22,.68,0,1.2);
 }
 
+/* ─── base ────────────────────────────────────────────────── */
 body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
   background: #07111f;
   color: #eff6ff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 * { box-sizing: border-box; }
