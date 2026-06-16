@@ -3,6 +3,11 @@ import { projectStories } from '../lib/caseStudies';
 import { caseStudyContent, portfolioContent } from '../lib/portfolio';
 
 export default function ProjectsPage() {
+  const getStory = (id: string) => projectStories[id as keyof typeof projectStories] as (typeof projectStories)[keyof typeof projectStories] & {
+    skills?: string[];
+    tech?: string[];
+  };
+
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#0f172a_0%,_#020617_45%,_#01030a_100%)] px-6 py-12 text-slate-100">
       <section className="mx-auto flex max-w-6xl flex-col gap-10">
@@ -22,12 +27,12 @@ export default function ProjectsPage() {
               <h2 className="mt-4 text-2xl font-semibold text-white">{project.title}</h2>
               <div className="mt-2 text-sm text-slate-300">
                 <div className="flex gap-2 flex-wrap">
-                  {(projectStories[project.id as keyof typeof projectStories]?.skills || []).map((s) => (
+                  {(getStory(project.id)?.skills || []).map((s) => (
                     <span key={s} className="rounded-full border border-slate-700 bg-slate-950/70 px-2 py-1 text-[11px] text-slate-200">{s}</span>
                   ))}
                 </div>
                 <div className="mt-2 flex gap-2 flex-wrap">
-                  {(projectStories[project.id as keyof typeof projectStories]?.tech || []).map((t) => (
+                  {(getStory(project.id)?.tech || []).map((t) => (
                     <span key={t} className="rounded-full border border-slate-700 bg-slate-950/60 px-2 py-1 text-[11px] text-slate-300">{t}</span>
                   ))}
                 </div>

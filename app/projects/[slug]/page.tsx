@@ -6,6 +6,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   const project = caseStudyContent.projects.find((item) => item.id === params.slug);
   const story = project
     ? (projectStories[params.slug as keyof typeof projectStories] as (typeof projectStories)[keyof typeof projectStories] & {
+        skills?: string[];
+        tech?: string[];
         links?: { live?: string; deeplink?: string; deeplinkAndroid?: string };
       })
     : null;

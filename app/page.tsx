@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { caseStudyContent, portfolioContent } from './lib/portfolio';
+import avatar from '../Docs/assets/profile/avatar.png';
 
 export default function Home() {
   const projectIcons: Record<string, string> = {
@@ -53,7 +55,9 @@ export default function Home() {
             <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-cyan-400/10 blur-3xl" />
             <div className="absolute bottom-0 left-0 h-20 w-20 rounded-full bg-indigo-400/10 blur-3xl" />
             <div className="relative flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 via-sky-400 to-indigo-500 text-xl shadow-lg shadow-cyan-500/20">🚀</div>
+              <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-cyan-400/30 bg-slate-950/90 shadow-lg shadow-cyan-500/20">
+                <Image src={avatar} alt="Le Hoang Thien" fill className="object-cover" sizes="64px" priority />
+              </div>
               <div>
                 <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">About</p>
                 <h2 className="text-xl font-semibold text-white">Le Hoang Thien</h2>
