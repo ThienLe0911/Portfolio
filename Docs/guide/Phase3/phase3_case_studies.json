@@ -1,0 +1,65 @@
+{
+  "projects": [
+    {
+      "id": "myu",
+      "title": "myU",
+      "status": "draft-ready",
+      "metrics": {
+        "totalOrders": 47288,
+        "activeUsers": 184908,
+        "peakOrdersPerDay": 8823,
+        "totalTransactions": 317084
+      },
+      "source": [
+        "Docs/myu & id-myu/tonghopDuanMyu.md"
+      ]
+    },
+    {
+      "id": "myu-id",
+      "title": "MyU ID",
+      "status": "draft-ready",
+      "metrics": {
+        "totalUsers": 223864,
+        "registeredDevices": 10454,
+        "otpSent": 309239,
+        "passwordResetEvents": 75497
+      },
+      "source": [
+        "Docs/myu & id-myu/tonghopDuanMyuIdMyu.md"
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Events Platform",
+      "status": "draft-ready",
+      "metrics": {
+        "eventsOrganized": 48,
+        "surveyResponses": 270524,
+        "peakResponsesPerDay": 3325,
+        "peakResponsesPerHour": 2433,
+        "peakResponsesPerMinute": 103
+      },
+      "source": [
+        "Docs/events-myu-vn/tonghopDuanTaoFormCustom.md",
+        "Docs/events-myu-vn/tonghopDuanTaoFormCustomFE.md"
+      ]
+    },
+    {
+      "id": "hung-hau-house",
+      "title": "Hung Hau House",
+      "status": "draft-ready",
+      "metrics": {},
+      "source": [
+        "Docs/Hung Hau House/tonghopduanNgoinhaHunghau.md",
+        "Docs/Hung Hau House/tonghopduanNgoinhaHunghauFE.md"
+      ]
+    },
+    {
+      "id": "face-verification",
+      "title": "Face Verification",
+      "status": "optional-placeholder",
+      "metrics": {},
+      "source": []
+    }
+  ]
+}

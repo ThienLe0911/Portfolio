@@ -1,0 +1,29 @@
+{
+  "metrics": [
+    {
+      "id": "active_users_2026",
+      "label": "Active users (snapshot)",
+      "value": 184908,
+      "unit": "users",
+      "description": "Monthly active users across the myU ecosystem (snapshot 2026).",
+      "source": "Docs/myu & id-myu/tonghopDuanMyu.md"
+    },
+    {
+      "id": "survey_responses_events",
+      "label": "Survey responses",
+      "value": 270524,
+      "unit": "responses",
+      "description": "Total survey responses collected across the Events Platform.",
+      "source": "Docs/events-myu-vn/tonghopDuanTaoFormCustom.md"
+    },
+    {
+      "id": "featured_projects",
+      "label": "Featured projects",
+      "value": 4,
+      "unit": "projects",
+      "description": "Number of featured case studies planned for the portfolio (myU, MyU ID, Events Platform, Hung Hau House).",
+      "source": "Docs/guide/MasterPlan.md"
+    }
+  ],
+  "generated_at": "2026-06-15T00:00:00Z"
+}

@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "version": "v1",
+    "updated_at": "2026-06-15T00:00:00Z",
+    "language": "en",
+    "notes": "Phase 2 content bundle for dev integration"
+  },
+  "hero": {
+    "headline": "Le Hoang Thien — Product-Focused Engineer Designing Reliable Systems at Scale",
+    "subheadline": "I combine product thinking with engineering rigor to turn ideas into reliable, scalable products.",
+    "ctas": {
+      "primary": {
+        "label": "View Projects",
+        "href": "/projects"
+      },
+      "secondary": {
+        "label": "Download Resume (PDF)",
+        "href": "Docs/assets/profile/resume.pdf"
+      }
+    },
+    "microcopy": "Resume (PDF) — Full summary of experience, technologies, and project outcomes.",
+    "image": {
+      "src": "Docs/assets/profile/avatar.png",
+      "alt": "Portrait of Le Hoang Thien — Product-Focused Engineer"
+    }
+  },
+  "about": {
+    "short_blurb": "Le Hoang Thien — Product-focused engineer. I design and build impactful products with reliable, scalable architectures.",
+    "extended_story": [
+      "I blend product thinking with engineering skills to turn ideas into practical solutions. My role is to define architecture and technical decisions that keep products stable and scalable.",
+      "My approach is iterative and data-informed: I start with discovery, validate hypotheses quickly, then design systems aligned with product goals. I prioritize clear trade-offs—reducing complexity where appropriate and investing in reliability where it matters most.",
+      "I have contributed to projects such as myU, MyU ID, Events Platform, and Hung Hau House—covering product discovery, backend architecture, authentication integration, and end-to-end feature delivery. Each project sharpened my ability to choose technical trade-offs that drive product outcomes.",
+      "Currently, I am expanding my expertise in system architecture, observability, and operational reliability. I focus on measuring product success through data and ensuring systems deliver on those commitments."
+    ],
+    "engineering_journey": [
+      "Lead product discovery and define success metrics for core features.",
+      "Design backend architecture and APIs for user-facing applications (e.g., myU).",
+      "Build authentication and identity solutions (MyU ID), including SSO integrations.",
+      "Architect event-driven platforms: contract design, data pipelines, and delivery models.",
+      "Deliver full-stack solutions for smaller projects (Hung Hau House), from UI/UX to backend.",
+      "Align engineering choices with product management to prioritize the roadmap by user impact.",
+      "Tech stack: Next.js, TypeScript, Node.js, TailwindCSS, cloud infrastructure.",
+      "Focus areas: observability, testing, performance, and maintainability."
+    ]
+  },
+  "metrics": [
+    {
+      "id": "active_users_2026",
+      "label": "Active users (snapshot)",
+      "value": 184908,
+      "unit": "users",
+      "description": "Monthly active users across the myU ecosystem (snapshot 2026)."
+    },
+    {
+      "id": "survey_responses_events",
+      "label": "Survey responses",
+      "value": 270524,
+      "unit": "responses",
+      "description": "Total survey responses collected across the Events Platform."
+    },
+    {
+      "id": "featured_projects",
+      "label": "Featured projects",
+      "value": 4,
+      "unit": "projects",
+      "description": "Number of featured case studies planned for the portfolio."
+    }
+  ],
+  "timeline": [
+    {
+      "id": "events-peak-2026-01-24",
+      "title": "Events Platform — Peak production usage",
+      "date": "2026-01-24",
+      "description": "Dynamic form/survey platform used for large events. 48 events organized; 270,524 survey responses; peak 3,325 responses on 2026-01-24.",
+      "slug": "/projects/events"
+    },
+    {
+      "id": "events-high-concurrency-2025-12-01-2026-01-31",
+      "title": "Events Platform — High-concurrency handling & FE features",
+      "period": "Dec 2025 - Jan 2026",
+      "description": "Handled traffic spikes (up to 2,433 responses/hour, 103 responses/minute). Implemented dynamic form builder, Office365 SSO (MSAL), Excel export, and QR check-in.",
+      "slug": "/projects/events"
+    },
+    {
+      "id": "myu-2026-snapshot",
+      "title": "myU — Orders & growth snapshot",
+      "period": "2026 (snapshot)",
+      "description": "Production e-commerce/ticketing site with measurable business impact: total orders and active users. Peak orders/day recorded.",
+      "slug": "/projects/myu"
+    },
+    {
+      "id": "myu-id-auth-platform",
+      "title": "MyU ID — Identity & SSO platform",
+      "period": "Ongoing",
+      "description": "Built OAuth2-based SSO, social login (Google/Facebook/Apple), OTP flows, device management, and structured logging.",
+      "slug": "/projects/myu-id"
+    },
+    {
+      "id": "hung-hau-2026-06-01",
+      "title": "Hung Hau House — Architecture & platform update",
+      "date": "2026-06-01",
+      "description": "Next.js + API + data layer architecture with emphasis on SSR/CSR patterns, auth (MSAL), hydration handling, and performance improvements.",
+      "slug": "/projects/hung-hau-house"
+    }
+  ],
+  "learning": {
+    "items": [
+      {
+        "title": "System Architecture & Scalability",
+        "description": "Designing modular systems with clear boundaries, resilient APIs, and practical scaling strategies."
+      },
+      {
+        "title": "Observability & Reliability",
+        "description": "Improving production visibility with structured logging, tracing, and actionable monitoring for faster incident response."
+      },
+      {
+        "title": "Performance Engineering",
+        "description": "Profiling end-to-end latency, optimizing data access patterns, and reducing frontend/backend bottlenecks."
+      },
+      {
+        "title": "Secure Authentication & Identity",
+        "description": "Deepening expertise in OAuth2/SSO flows, token lifecycle management, and secure session design."
+      },
+      {
+        "title": "Product Engineering Craft",
+        "description": "Strengthening the bridge between product decisions and engineering trade-offs using measurable outcomes."
+      }
+    ]
+  },
+  "contact": {
+    "linkedin": "https://www.linkedin.com/in/thien-le-hoang-074313208/",
+    "github": "https://github.com/ThienLe0911",
+    "email": "lehollo09112000@gmail.com",
+    "resume": "Docs/assets/profile/resume.pdf"
+  },
+  "assets": {
+    "profile": {
+      "avatar": "Docs/assets/profile/avatar.png",
+      "resume": "Docs/assets/profile/resume.pdf"
+    },
+    "project_covers": {
+      "myu": null,
+      "myu_id": null,
+      "events": null,
+      "hung_hau_house": null
+    }
+  }
+}
